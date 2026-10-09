@@ -81,6 +81,34 @@ public class StringPractise {
         int index= 4;
         String subStringToReplace = "for";
         System.out.println(a.substring(0,index+1)+subStringToReplace+a.substring(index, a.length()));
+
+
+        // swaping..
+        String newstringResvers = "";
+        for (int letter=0; letter< a.length(); letter +=2){
+            String subString = a.substring(letter,Math.min(letter+2,a.length()));
+//            newstringResvers += new StringBuffer(subString).reverse().toString();
+            newstringResvers += reverse(subString);
+        }
+        System.out.println(a);
+        System.out.println(newstringResvers);
+
+        int[] values1 = {1,2,3,4};
+        System.out.println(Arrays.toString(values1));
+        String xx= "";
+        for (int x: values1){
+            xx += String.valueOf(x);
+        }
+        System.out.println(Arrays.toString(xx.toCharArray()));
     }
+    public static String reverse(String s){
+        StringBuilder reversed = new StringBuilder();
+        for (char ch: s.toCharArray()){
+            reversed.insert(0, ch);
+        }
+        return reversed.toString();
+
+    }
+
 
 }

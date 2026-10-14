@@ -83,8 +83,8 @@ public class SortingPractise {
         Comparator<Employee> multipleCompare1 =
                 ageCOmparator1.thenComparing ( ageCOmparator2 ).thenComparing ( ageCOmparator3 );
         Comparator<Employee> multipleCompare2 =
-                Comparator.comparing ( (e1,e2) -> Integer.compare ( e1.age,e2.age
-                ) );
+                Comparator.comparing((Employee e) -> e.age)
+                        .thenComparing(e -> e.name);
 
 
     }

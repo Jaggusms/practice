@@ -14,7 +14,7 @@ class AgeException extends RuntimeException {
     }
 }
 
-public class Main {
+public class RuntimeExceptionss {
 
     public static void main(String[] args) {
 

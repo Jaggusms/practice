@@ -3,6 +3,28 @@ There are two ways to create a custom exception:
 1. Checked Exception – Extend Exception.
 2. Unchecked Exception – Extend RuntimeException.
 
+
+
+4. Important: Difference between throw and throws
+These are frequently asked in Java interviews.
+
+throw: Used to explicitly throw an exception.
+throw new AgeException("Invalid age");
+
+throws: Used in a method declaration to indicate that the method may throw an exception.
+void checkAge(int age) throws AgeException {
+
+    if (age < 18) {
+        throw new AgeException("Invalid age");
+    }
+}
+
+Remember:
+- throw → Actually throws the exception.
+- throws → Declares the possibility of an exception.
+
+
+
 */
 
 // Custom exception

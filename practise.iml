@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" packagePrefix="practise" />
+      <sourceFolder url="file://$MODULE_DIR$/CodingQuestions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ThreadsPractise/CompletableFutureDemo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ThreadsPractise/coreThreads" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/SortingPractise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/StringPractise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/convertions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/maps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/reModule" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/collectionsPractise/setsPractise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/designPatterns" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/designPatterns/immutablePractise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/optionals" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scheduling" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springBtachs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/stringPractise" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/time" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="21 (2)" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

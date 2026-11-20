@@ -225,10 +225,9 @@ import java.nio.file.*;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.*;
-import java.util.concurrent.Executors;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
 
 /**
  * ThreadDemo demonstrates various ways of handling concurrency in Java,
@@ -315,7 +314,7 @@ public class ThreadDemo {
      */
     public static void method1NormalThread(String fileName) throws InterruptedException {
         class FileReadThread extends Thread {
-            @Override
+            @Overrides
             public void run() {
                 processFileTask(fileName);
             }

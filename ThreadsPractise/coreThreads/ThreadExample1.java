@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 class MyThread extends Thread {
 
-    @Override
+    @Overrides
     public void run() {
         for (int i = 1; i <= 5; i++) {
             System.out.println(Thread.currentThread().getName() + " : " + i);
@@ -13,7 +12,7 @@ class MyThread extends Thread {
 }
 class MyTask implements Runnable {
 
-    @Override
+    @Overrides
     public void run() {
         ArrayList<Integer> array =
                 new ArrayList<>( IntStream.range(0, 11)
@@ -64,5 +63,42 @@ public class    ThreadExample1 {
 
         t111.start();
         t222.start();
+
+
+        // int a = 10;
+        // int b = 20;
+
+        // Runnable task = () -> {
+
+        //     int sum = a + b;
+
+        //     System.out.println(
+        //         Thread.currentThread().getName() + " Sum: " + sum
+        //     );
+        // };
+
+        // Thread t1 = new Thread(task);
+        // Thread t2 = new Thread(task);
+
+        // t1.start();
+        // t2.start();
+
+        // Runnable task = () -> {
+
+        //     Random random = new Random();
+
+        //     int number = random.nextInt(100);
+
+        //     System.out.println(
+        //         Thread.currentThread().getName() +
+        //         " Random Number: " + number
+        //     );
+        // };
+
+        // Thread t1 = new Thread(task);
+        // Thread t2 = new Thread(task);
+
+        // t1.start();
+        // t2.start();
     }
 }

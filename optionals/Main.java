@@ -17,7 +17,7 @@ public class Main {
             this.id = id;
             this.name = name;
             this.department = department;
-            this.salary = salary;
+     Overrideshis.salary = salary;
         }
 
         public Integer getId() {

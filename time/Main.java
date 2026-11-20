@@ -11,7 +11,6 @@ public class Main {
 
         System.out.println(now);
 
-
         String time = "2026-10-17T13:53:01";
 
         LocalDateTime dateTime = LocalDateTime.parse(time);

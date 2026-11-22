@@ -23,7 +23,9 @@ Remember:
 - throw → Actually throws the exception.
 - throws → Declares the possibility of an exception.
 
-
+For checked exceptions, Java allows you to do either of these:
+1. Handle the exception using try-catch.
+2. Declare the exception using throws and let the caller handle it.
 
 */
 
@@ -54,6 +56,102 @@ public class CheckedException {
     }
 }
 
+
+/*
+A good custom exception generally provides these constructors:
+
+
+| Constructor | Purpose |
+|---|---|
+| `InvalidAgeException()` | Creates exception without a custom message |
+| `InvalidAgeException(String message)` | Provides a meaningful error message |
+| `InvalidAgeException(Throwable cause)` | Preserves the original exception |
+| `InvalidAgeException(String message, Throwable cause)` | Provides both message and original exception |
+
+Let's understand when to use each one.
+
+Constructor 1:
+throw new InvalidAgeException();
+
+Use when you don't need to provide a specific message or original cause.
+
+Constructor 2:
+throw new InvalidAgeException("Age must be greater than 18");
+
+Use when you want to communicate a business validation failure.
+
+Constructor 3:
+catch (SQLException e) {
+    throw new InvalidAgeException(e);
+}
+
+Use when you want to wrap an existing exception without providing a separate message.
+
+Constructor 4:
+catch (SQLException e) {
+    throw new InvalidAgeException("Unable to validate user age", e);
+}
+
+Use when you want to provide your own message while preserving the original exception.
+Important interview point
+These constructors are not mandatory in every custom exception.
+
+You should provide constructors according to how the exception will be used.
+
+public class InvalidAgeException extends Exception {
+
+    public InvalidAgeException() {
+        super();
+    }
+
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+
+    public InvalidAgeException(Throwable cause) {
+        super(cause);
+    }
+
+    public InvalidAgeException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
+
+
+
+              java.io.Serializable
+                  (Interface)
+                       |
+          +------------+-------------+
+          |            |             |
+       Object       Exception     Collection
+       classes         |             |
+          |         Throwable     +--+----------+
+          |            |          |             |
+      Employee      IOException  List          Set
+      Student       RuntimeException
+      Product       SQLException
+                       |
+                 Custom Exceptions
+ 
+
+
+                 
+                     java.lang.Object
+                           |
+                           |
+                    java.lang.Throwable
+                           |
+              +------------+------------+
+              |                         |
+           Error                    Exception
+                                         |
+                              +----------+----------+
+                              |                     |
+                       IOException          RuntimeException
+                              |
+                         SQLException
+                 */
 
 
 // class MyException extends Exception {

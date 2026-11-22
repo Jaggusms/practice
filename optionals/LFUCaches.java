@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+public class LRUCaches {
 
     // ==================== EMPLOYEE DTO ====================
 
